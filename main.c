@@ -2,10 +2,11 @@
 
 int main(){
 
-    float pa;   // number of plate appearances
-    
+    int pa;   // number of plate appearances
+
+
     printf("Enter number of Plate Appearances: \n");
-    scanf("%f", &pa);
+    scanf("%d", &pa);
 
     return 0;
 }
