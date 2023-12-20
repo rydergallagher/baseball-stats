@@ -9,12 +9,12 @@ int main(){
     float ba; // batting average
 
     printf("Enter number of Plate Appearances: \n");
-    //scanf("%f", &pa);
-    pa = 100; // for testing
+    scanf("%f", &pa);
+    //pa = 100; // for testing
 
     printf("Enter number of hits: \n");
-    //scanf("%f", &hits);
-    hits = 20; // for testing
+    scanf("%f", &hits);
+    //hits = 20; // for testing
 
     ba = calculate_ba(hits, pa);
     printf("%f", ba);

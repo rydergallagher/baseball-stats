@@ -3,11 +3,10 @@
 
 calculate_ba:
 
-    movq %rdi, %rax  # moves argument 1 (hits) into rax (result for division)
-    movq %rsi, %r9   # moves argument 2 (plate appearances) into r9 (for organizational purposes)
-    movq $0, %rdx    # moves 0 into rdx (remainder value for division)
-
-    divq %rsi       # rax = rax / rsi (hits / plate appearances)
+    # vdivss src1, src2, dst
+    # dst = srcs2 / srcs1
+    vmovaps %xmm0, %xmm8        # move arg 1 into xmm8 (for organization)
+    vxorps %xmm0, %xmm0 , %xmm0 # 0 out return register
+    vdivss %xmm1, %xmm8, %xmm0  # return = hits / plate appearances
    
-
     retq
