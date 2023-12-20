@@ -79,6 +79,9 @@ int main(){
     printf("\n");
 
     ops = calculate_ops(obp, slg);
+    printf("The OPS is: \n");
+    printf("%.3f", ops);
+    printf("\n");
     
     return 0;
 }
