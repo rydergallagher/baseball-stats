@@ -17,7 +17,9 @@ int main(){
     //hits = 20; // for testing
 
     ba = calculate_ba(hits, pa);
-    printf("%f", ba);
+    printf("The batting average is: \n");
+    printf("%.3f", ba);
+    printf("\n");
 
     return 0;
 }
