@@ -8,6 +8,8 @@ float calculate_obp(float plate_appearances, float hits, float walks, float hitb
 
 float calculate_slg(float singles, float doubles, float triples, float hrs, float pa, float mult1, float mult2, float mult3); // function to calculate slugging percentage
 
+float calculate_ops(float obp, float slg);
+
 int main(){
 
     float pa;   // number of plate appearances
@@ -22,6 +24,7 @@ int main(){
     float ba; // batting average
     float obp; // on base percentage
     float slg; // slugging percentage
+    float ops; // on base + slugging
 
     printf("Enter number of Plate Appearances: \n");
     scanf("%f", &pa);
@@ -74,6 +77,8 @@ int main(){
     printf("The slugging percentage is: \n");
     printf("%.3f", slg);
     printf("\n");
+
+    ops = calculate_ops(obp, slg);
     
     return 0;
 }
