@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-float calculate_ba(int plate_appearances, int hits); //function to calculate batting average
+float calculate_ba(float plate_appearances, float hits); //function to calculate batting average
 
 int main(){
 
-    int pa;   // number of plate appearances
-    int hits; // number of hits
+    float pa;   // number of plate appearances
+    float hits; // number of hits
     float ba; // batting average
 
     printf("Enter number of Plate Appearances: \n");
-    //scanf("%d", &pa);
+    //scanf("%f", &pa);
     pa = 100; // for testing
 
     printf("Enter number of hits: \n");
-    //scanf("%d", &hits);
+    //scanf("%f", &hits);
     hits = 20; // for testing
 
     ba = calculate_ba(hits, pa);
