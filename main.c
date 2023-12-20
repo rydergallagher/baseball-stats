@@ -6,15 +6,15 @@ int main(){
 
     int pa;   // number of plate appearances
     int hits; // number of hits
-    float ba;   // batting average
+    float ba; // batting average
 
     printf("Enter number of Plate Appearances: \n");
     //scanf("%d", &pa);
-    pa = 100;
+    pa = 100; // for testing
 
     printf("Enter number of hits: \n");
     //scanf("%d", &hits);
-    hits = 20;
+    hits = 20; // for testing
 
     ba = calculate_ba(hits, pa);
     printf("%f", ba);
