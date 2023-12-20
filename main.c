@@ -6,7 +6,7 @@ float calculate_ba(float hits, float plate_appearances); // function to calculat
 
 float calculate_obp(float plate_appearances, float hits, float walks, float hitbypitches, float sacflies); // function to calculate on base percentage
 
-//float calculate_slg(float singles, float doubles, float triples, float hrs); // function to calculate slugging percentage
+float calculate_slg(float singles, float doubles, float triples, float hrs, float pa, float mult1, float mult2, float mult3); // function to calculate slugging percentage
 
 int main(){
 
@@ -43,10 +43,6 @@ int main(){
     scanf("%f", &hrs);
     //hrs = 5 // for testing
 
-    // printf("Enter number of hits: \n");
-    // scanf("%f", &hits);
-    // //hits = 20; // for testing
-
     printf("Enter number of walks: \n");
     scanf("%f", &walks);
     //walks = 10 // for testing
@@ -74,10 +70,10 @@ int main(){
     printf("%.3f", obp);
     printf("\n");
 
-    // slg = calculate_slg(singles, doubles, triples, hrs);
-    // printf("The slugging percentage is: \n");
-    // printf("%.3f", slg);
-    // printf("\n");
+    slg = calculate_slg(singles, doubles, triples, hrs, pa, 2, 3, 4); // 2, 3, and 4 are the multipliers for the stats, you have to do this with floats in assembly
+    printf("The slugging percentage is: \n");
+    printf("%.3f", slg);
+    printf("\n");
     
     return 0;
 }
